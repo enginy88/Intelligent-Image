@@ -12,6 +12,10 @@
 		484C44EC1F60037200D48C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484C44EA1F60037200D48C6C /* Main.storyboard */; };
 		484C44EE1F60037200D48C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484C44ED1F60037200D48C6C /* Assets.xcassets */; };
 		484C44F11F60037200D48C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484C44EF1F60037200D48C6C /* LaunchScreen.storyboard */; };
+		484C44F91F60041E00D48C6C /* CameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 484C44F81F60041C00D48C6C /* CameraIcon.png */; };
+		484C44FC1F6007AB00D48C6C /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 484C44FA1F6007A000D48C6C /* GoogLeNetPlaces.mlmodel */; };
+		484C44FF1F60185400D48C6C /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 484C44FD1F60184B00D48C6C /* MobileNet.mlmodel */; };
+		484C45001F60185700D48C6C /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 484C44FE1F60185200D48C6C /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		484C44ED1F60037200D48C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484C44F01F60037200D48C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484C44F21F60037200D48C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484C44F81F60041C00D48C6C /* CameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraIcon.png; sourceTree = "<group>"; };
+		484C44FA1F6007A000D48C6C /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		484C44FD1F60184B00D48C6C /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		484C44FE1F60185200D48C6C /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				484C44ED1F60037200D48C6C /* Assets.xcassets */,
 				484C44EF1F60037200D48C6C /* LaunchScreen.storyboard */,
 				484C44F21F60037200D48C6C /* Info.plist */,
+				484C44FA1F6007A000D48C6C /* GoogLeNetPlaces.mlmodel */,
+				484C44FD1F60184B00D48C6C /* MobileNet.mlmodel */,
+				484C44FE1F60185200D48C6C /* SqueezeNet.mlmodel */,
+				484C44F81F60041C00D48C6C /* CameraIcon.png */,
 			);
 			path = "Intelligent Image";
 			sourceTree = "<group>";
@@ -126,6 +138,7 @@
 				484C44F11F60037200D48C6C /* LaunchScreen.storyboard in Resources */,
 				484C44EE1F60037200D48C6C /* Assets.xcassets in Resources */,
 				484C44EC1F60037200D48C6C /* Main.storyboard in Resources */,
+				484C44F91F60041E00D48C6C /* CameraIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484C44FF1F60185400D48C6C /* MobileNet.mlmodel in Sources */,
 				484C44E91F60037200D48C6C /* ViewController.swift in Sources */,
+				484C45001F60185700D48C6C /* SqueezeNet.mlmodel in Sources */,
 				484C44E71F60037200D48C6C /* AppDelegate.swift in Sources */,
+				484C44FC1F6007AB00D48C6C /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

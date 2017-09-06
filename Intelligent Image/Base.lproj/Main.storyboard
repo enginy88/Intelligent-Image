@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,90 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Intelligent_Image" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a model &amp; image to start!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-77-UBM">
+                                <rect key="frame" x="30" y="487" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="45W-PG-UKd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Recognizer App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gli-Ww-8ww">
+                                <rect key="frame" x="30" y="50" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LTF-VM-Qk6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-e2-QHr">
+                                <rect key="frame" x="30" y="607" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OJD-GL-cPu"/>
+                                </constraints>
+                                <state key="normal" title="Choose Image"/>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dk6-aC-wN9"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-xy-gAY">
+                                <rect key="frame" x="30" y="547" width="315" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tk3-L0-Vps"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="GoogleNet"/>
+                                    <segment title="MobileNet"/>
+                                    <segment title="SqueezeNet"/>
+                                </segments>
+                                <connections>
+                                    <action selector="modelSelectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="KWQ-vO-hPf"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oft-kj-DfL">
+                                <rect key="frame" x="30" y="110" width="315" height="347"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xHR-e2-QHr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="30I-Yl-IsS"/>
+                            <constraint firstItem="dWa-xy-gAY" firstAttribute="top" secondItem="g1i-77-UBM" secondAttribute="bottom" constant="30" id="3uA-NR-S3p"/>
+                            <constraint firstItem="dWa-xy-gAY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8VN-vk-Srj"/>
+                            <constraint firstItem="Gli-Ww-8ww" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9oJ-Kw-ViO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xHR-e2-QHr" secondAttribute="trailing" constant="30" id="AvB-Xt-VI3"/>
+                            <constraint firstItem="g1i-77-UBM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="B8u-tv-f5l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oft-kj-DfL" secondAttribute="trailing" constant="30" id="BoB-rk-Pbv"/>
+                            <constraint firstItem="g1i-77-UBM" firstAttribute="top" secondItem="Oft-kj-DfL" secondAttribute="bottom" constant="30" id="DIy-n2-oOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xHR-e2-QHr" secondAttribute="bottom" constant="30" id="GRB-Bu-EzZ"/>
+                            <constraint firstItem="Oft-kj-DfL" firstAttribute="top" secondItem="Gli-Ww-8ww" secondAttribute="bottom" constant="30" id="Hhe-aM-70h"/>
+                            <constraint firstItem="xHR-e2-QHr" firstAttribute="top" secondItem="dWa-xy-gAY" secondAttribute="bottom" constant="30" id="M4b-QN-uAZ"/>
+                            <constraint firstItem="Gli-Ww-8ww" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="aWM-lK-rAA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g1i-77-UBM" secondAttribute="trailing" constant="30" id="sRz-u3-S5e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dWa-xy-gAY" secondAttribute="trailing" constant="30" id="sd5-if-ShJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gli-Ww-8ww" secondAttribute="trailing" constant="30" id="urj-om-F32"/>
+                            <constraint firstItem="Oft-kj-DfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zMz-xY-JPA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Oft-kj-DfL" id="PW4-Ge-4ds"/>
+                        <outlet property="modelSelector" destination="dWa-xy-gAY" id="6x6-VC-z4W"/>
+                        <outlet property="resultLabel" destination="g1i-77-UBM" id="yGl-HO-78D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CameraIcon.png" width="512" height="512"/>
+    </resources>
 </document>
